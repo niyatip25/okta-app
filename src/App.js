@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import OverviewFlow from "./Flow/OverviewFlow";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ fontWeight: "bold", fontSize: "xxx-large" }}>Okta</div>
+        <div style={{ fontWeight: "bold", fontSize: "xxx-large" }}>
+          Office 365
+        </div>
+      </div>
+      <div
+        style={{
+          // display: "flex",
+          // flexDirection: "column",
+          width: "100%",
+          height: "100vh",
+          // alignItems: "center",
+          // justifyContent: "center",
+          // paddingTop: "10px",
+          // backgroundColor: "#f2f3f4",
+        }}
+      >
+        <OverviewFlow />
+      </div>
+    </>
   );
 }
 
