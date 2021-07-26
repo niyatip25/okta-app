@@ -1,7 +1,6 @@
 import { Route } from "react-router-dom";
 import OktaMain from "./Flow/OktaMain";
-import App1 from "./Flow/App1";
-import App2 from "./Flow/App2";
+import NodeDetails from "./Flow/NodeDetails";
 
 function App() {
   return (
@@ -9,11 +8,8 @@ function App() {
       <Route exact path="/">
         <OktaMain />
       </Route>
-      <Route path="/App1">
-        <App1 />
-      </Route>
-      <Route path="/App2">
-        <App2 />
+      <Route exact path="/:id">
+        <NodeDetails />
       </Route>
     </>
   );
