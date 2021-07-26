@@ -1,28 +1,20 @@
-import OverviewFlow from "./Flow/OverviewFlow";
+import { Route } from "react-router-dom";
+import OktaMain from "./Flow/OktaMain";
+import App1 from "./Flow/App1";
+import App2 from "./Flow/App2";
 
 function App() {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div style={{ fontWeight: "bold", fontSize: "xxx-large" }}>Okta</div>
-        <div style={{ fontWeight: "bold", fontSize: "xxx-large" }}>
-          Office 365
-        </div>
-      </div>
-      <div
-        style={{
-          // display: "flex",
-          // flexDirection: "column",
-          width: "100%",
-          height: "100vh",
-          // alignItems: "center",
-          // justifyContent: "center",
-          // paddingTop: "10px",
-          // backgroundColor: "#f2f3f4",
-        }}
-      >
-        <OverviewFlow />
-      </div>
+      <Route exact path="/">
+        <OktaMain />
+      </Route>
+      <Route path="/App1">
+        <App1 />
+      </Route>
+      <Route path="/App2">
+        <App2 />
+      </Route>
     </>
   );
 }
