@@ -1,8 +1,9 @@
 import { Route } from "react-router-dom";
 import OktaMain from "./Flow/OktaMain";
 import NodeDetails from "./Flow/NodeDetails";
+import NotFoundPage from "./Flow/NotFoundPage";
 
-function App() {
+const App = () => {
   return (
     <>
       <Route exact path="/">
@@ -14,8 +15,9 @@ function App() {
       <Route exact path="/okta/:id">
         <NodeDetails />
       </Route>
+      {/* <Route component={NotFoundPage} /> */}
     </>
   );
-}
+};
 
 export default App;
