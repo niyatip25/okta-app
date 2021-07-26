@@ -12,8 +12,10 @@ const OktaMain = () => {
   const history = useHistory();
 
   const onElementClick = (event, element) => {
-    if (element.data.label !== "Okta") {
-      history.push(`/${element.data.label}`);
+    if (element.data.label === "Okta") {
+      history.push("/okta");
+    } else {
+      history.push(`/okta/${element.data.label}`);
     }
   };
 

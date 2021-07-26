@@ -8,7 +8,10 @@ function App() {
       <Route exact path="/">
         <OktaMain />
       </Route>
-      <Route exact path="/:id">
+      <Route exact path="/okta">
+        <OktaMain />
+      </Route>
+      <Route exact path="/okta/:id">
         <NodeDetails />
       </Route>
     </>
