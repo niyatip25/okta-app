@@ -9,15 +9,13 @@ const typeOutput = "output";
 const sourcePosLeft = "left";
 const sourcePosRight = "right";
 
-var LeftNodes = [];
-var RightNodes = [];
 var MindMaps = [];
 
 dataLabels.forEach((data, index) => {
   var data1 = { label: dataLabels[index].sourceExpression };
   var data2 = { label: dataLabels[index].targetField };
 
-  LeftNodes.push({
+  MindMaps.push({
     id: index,
     data: data1,
     type: typeInput,
@@ -28,7 +26,7 @@ dataLabels.forEach((data, index) => {
     },
   });
 
-  RightNodes.push({
+  MindMaps.push({
     id: index + dataLabels.length,
     data: data2,
     type: typeOutput,
@@ -47,12 +45,6 @@ dataLabels.forEach((data, index) => {
   });
 });
 
-console.log("LeftNodes: ", LeftNodes);
-console.log("RightNodes: ", RightNodes);
 console.log("MindMaps: ", MindMaps);
 
-var a = LeftNodes.concat(RightNodes);
-var finalArray = a.concat(MindMaps);
-console.log("finalArray: ", finalArray);
-
-export const flowElements = finalArray;
+export const flowElements = MindMaps;
