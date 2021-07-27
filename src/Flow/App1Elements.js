@@ -12,12 +12,12 @@ const sourcePosRight = "right";
 var MindMaps = [];
 
 dataLabels.forEach((data, index) => {
-  var data1 = { label: dataLabels[index].sourceExpression };
-  var data2 = { label: dataLabels[index].targetField };
+  const sourceNode = { label: dataLabels[index].sourceExpression };
+  const targetNode = { label: dataLabels[index].targetField };
 
   MindMaps.push({
     id: index,
-    data: data1,
+    data: sourceNode,
     type: typeInput,
     sourcePosition: sourcePosRight,
     position: { x: 250, y: index * 60 },
@@ -28,7 +28,7 @@ dataLabels.forEach((data, index) => {
 
   MindMaps.push({
     id: index + dataLabels.length,
-    data: data2,
+    data: targetNode,
     type: typeOutput,
     targetPosition: sourcePosLeft,
     position: { x: 750, y: index * 60 },
