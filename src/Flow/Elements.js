@@ -2,17 +2,17 @@
 
 export default [
   {
-    id: "1",
+    id: "O1",
     data: {
       label: "Okta",
     },
     type: "input",
     sourcePosition: "right",
-    position: { x: 250, y: 30 },
+    position: { x: 150, y: 30 },
   },
 
   {
-    id: "2",
+    id: "A1",
     data: {
       label: "App1",
     },
@@ -21,7 +21,7 @@ export default [
     targetPosition: "left",
   },
   {
-    id: "3",
+    id: "A2",
     data: {
       label: "App2",
     },
@@ -31,10 +31,10 @@ export default [
   },
 
   {
-    id: "e1-1",
-    source: "1",
-    target: "2",
+    id: "e11",
+    source: "O1",
+    target: "A1",
     animated: true,
   },
-  { id: "e1-2", source: "1", target: "3", animated: true },
+  { id: "e12", source: "O1", target: "A2", animated: true },
 ];
